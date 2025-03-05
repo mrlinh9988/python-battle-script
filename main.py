@@ -5,7 +5,13 @@ magic = [{ "name": "Fire", "cost": 10, "dmg": 60 },
          { "name": "Blizzard", "cost": 10, "dmg": 60 }]
 
 player = Person(460, 65, 60, 34, magic)
+enemy = Person(1200, 65, 45, 25, magic)
 
-print(player.generate_spell_damage(0))
-print(player.generate_spell_damage(1))
-print(player.generate_spell_damage(2))
+running = True 
+i = 0
+
+while running:
+    print('===========================')
+    player.choose_action()
+    
+    running = False
